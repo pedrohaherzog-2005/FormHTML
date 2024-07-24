@@ -1,4 +1,12 @@
-/* form010.css */
+/* links.css */
+
+/* SELETORES PERSONALIZADOS
+   #   = id
+   .   = class
+   :   = pseudo-class
+   ::  = pseudo-element
+   >   = clildren
+*/
 
 :root {
     --cor0: #8d8d8d;
@@ -25,15 +33,15 @@ body {
 main {
     background-color: white;
     border-radius: 5px;
-    text-align: left;
+    text-align: center;
     margin-top: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
     max-width: 900px;
-    min-width: 700px;
+    min-width: 600px;
     transform: translate(-50%, -50%);
     position: absolute;
     padding: 15pt;
-    height: 240px;
+    height: 230px;
     margin: auto;
     left: 50%;
     top: 50%;
@@ -42,7 +50,7 @@ main {
 header {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     padding-top: 30px;
-    min-height: 70px;
+    min-height: 80px;
     text-align: center;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.275);
 }
@@ -52,24 +60,56 @@ header h1 {
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
     font-family: var(--fonte-destaque);
     font-weight: normal;
-    font-size: 30pt;
+    font-size: 3em;
     color: white;
 }
 
-form {
+main ul {
     background-color: var(--cor0);
-    border-radius: 5px;
-    margin-top: 10px;
+    list-style: none;
+    margin-top: 25px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.418);
-    font-size: 14pt;
-    padding: 15px;
+    min-width: 250px;
+    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.466);
 }
 
-input {
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 5px;
+#lista {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#lista:visited {
+    color: darkred;
+}
+
+#lista:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+#lista:active {
+    color: yellow;
+}
+
+#lista::before {
+    content: '⇒ ';
+}
+
+.repositorio::after {
+    content: ' ☑';
+    color: rgb(74, 23, 169);
+}
+
+.canal::after {
+    content: ' ►';
+    color: rgb(180, 38, 67);
+}
+
+.site::after {
+    content: ' ➥';
+    color: rgb(8, 8, 106);
 }
 
 footer {
@@ -77,7 +117,7 @@ footer {
     text-align: center;
     font-size: 12pt;
     position: relative;
-    padding: 10px;
+    padding: 5px;
     padding-left: 20px;
     bottom: -495px;
 }
